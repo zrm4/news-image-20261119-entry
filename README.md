@@ -1,8 +1,16 @@
-```md
-# Entry
 
-As of 19 November 2026, the world is brimming with exciting news. The highly anticipated Grand Theft Auto VI is set to launch, reigniting the excitement in the gaming community. In other news, the global economy is facing challenges, but there are some positive indicators of recovery. The entry page's front, 'entry.png', will be copied to the specified output directory, defaulting to `/output`. Users can run the following command to ensure the correct file is copied: `$MAKEFUN_OUTPUT_DIR/python3 main.py`. This will copy the `entry.png` file to the specified directory. Remember to verify the hash of the file using `$MAKEFUN_OUTPUT_DIR/entry.png && sha256sum entry.png $MAKEFUN_OUTPUT_DIR/entry.png` to ensure its integrity.
+# The World Today — 19 November 2026
 
-To learn more about the `main.py` script, visit the [GitHub repository](https://github.com/anomalyco/opencode).
+A newspaper front page that sums up 19 November 2026's world news in one
+image, led by the Grand Theft Auto VI launch after a 13-year wait, with the
+Gulf escalation, the first Trump-Putin-Xi summit, and Anthropic's $1.5
+trillion IPO beside it.
 
-Happy reading!
+## How it works
+
+`main.py` copies the committed `entry.png` (1024x1024 PNG, 103 KB) into the
+output directory — `$MAKEFUN_OUTPUT_DIR` if set, otherwise `/output` — byte
+for byte, with no network access. Run it with:
+
+    MAKEFUN_OUTPUT_DIR=out python3 main.py
+
